@@ -22,4 +22,9 @@ class Fail extends MainResponse
      */
     public $message = '';
 
+    /**
+     * @Assert\NotBlank
+     */
+    public $contactUs = false;
+
 }

@@ -165,10 +165,11 @@ class APIOperations
      * @param string $message
      * @return JsonResponse
      */
-    public function getSingleErrorJsonResponse($message)
+    public function getSingleErrorJsonResponse($message,$contactUs = false)
     {
         $errorResponse = new APIResponse\Fail();
         $errorResponse->message = $message;
+        $errorResponse->contactUs = $contactUs;
         return $this->getJsonResponseForObject($errorResponse);
     }
 
